@@ -1,0 +1,410 @@
+/* #E11B22 -> red used */
+
+.container {
+	top: -7px;
+	position: relative;
+	background-color: #FAFAFA
+}
+
+#logo {
+	float: left;
+}
+
+.navbar {
+	position: relative;
+	margin-left: 5em;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.navbar a{
+	position: relative;
+}
+
+.navbar a:nth-last-of-type(2){
+	margin-left: auto;
+}
+
+.navbar button::before{
+	content: '';
+	display: block;
+	height: 3px;
+	width: 0%;
+	background-color: black;
+	position: absolute;
+	top: 0;
+	left: 25%;
+	transition: all ease-in-out 300ms;
+}
+
+button {
+	height: 60px;
+	width: 150px;
+	background-color: #faf7f7;
+	border: 0px solid;
+	border-right: 1px solid;
+	display: inline-block;
+	cursor: pointer;
+	color: black;
+	font-family: "Work Sans";
+	font-weight: 400;
+	font-size: 0.7em;
+	padding: 6px 12px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.navbar a:nth-last-of-type(1) button{
+	border-right: 0px solid;
+}
+
+.navbar button:hover {
+	font-weight: 600;
+}
+
+.navbar button:hover::before {
+	width: 50%;	
+}
+
+.navbar button:active {
+	position: relative;
+	top: 1px;
+}
+
+.body {
+	background-color: white;
+}
+
+#home-header::before {
+	content: '';
+	background-image: url(images/drop.svg);
+	background-size: cover;
+	position: relative;
+	left: -3px;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+}
+
+.heading {
+	font-family: "Segoe UI";
+	font-weight: 600;
+	text-transform: uppercase;
+	text-align: center;
+	position: relative;
+}
+
+.heading::after {
+	content: attr(data-tool-tip);
+	font-size: 0.5em;
+	font-weight: 400;
+	text-transform: lowercase;
+	color: #E11B22;
+	position: absolute;
+	top: 80%;
+}
+
+.image {
+	position: relative;
+	top: 1em;
+	border-radius: 20px;
+	display: block;
+	margin: 0 auto;
+}
+
+.flexbox {
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+}
+  
+.card {
+	position: relative;
+	margin: 0.7em;
+	background: #555555;
+}
+  
+.card::before,
+.card::after {
+	content: "";
+	position: absolute;
+	top: 1.25em;
+	bottom: 1.25em;
+	left: 1.25em;
+	right: 1.25em;
+	opacity: 1;
+	transition: transform ease-out 250ms;
+}
+  
+.card::before {
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	transform: scale(0, 1);
+}
+  
+.card::after {
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	transform: scale(1, 0);
+}
+  
+.card:hover::before {
+	transform: scale(1.05, 1);
+}
+  
+.card:hover::after {
+	transform: scale(1, 1.05);
+}
+  
+.card_image {
+	max-width: 100%;
+	display: block;
+	opacity: 1;
+	transition: opacity ease-out 250ms;
+}
+  
+.card:hover .card_image{
+	opacity: 0.1;
+}
+  
+.card_text {
+	text-align: center;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	font-family: "Montserrat";
+	transform: translate(-50%, -50%);
+	color: white;
+	font-weight: 900;
+	opacity: 0;
+	transition: opacity ease-out 250ms;
+}
+  
+.card:hover .card_text {
+	opacity: 1;
+}
+  
+.card_title{
+	color: #E11B22;
+	font-size: 2rem;
+	margin-bottom: 0;
+}
+  
+.card_info{
+	font-size: 1.3rem;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 2em;
+}
+
+.box {
+	display: block;
+	width: 35%;
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.22);
+	padding: 1em;
+	margin: 1em 5.5em;
+}
+
+.box:nth-child(odd) {
+	background-color: #F1F1F1;
+	justify-self: start;
+}
+
+.box:nth-child(even) {
+	background-color: lightgray;
+	justify-self: end;
+}
+
+.box .box-title {
+	font-family: "Zen Kaku Gothic Antique";
+	font-size: 2rem;
+	color:#E11B22;
+	text-align: center;
+}
+
+.box .box-info {
+	font-family: "Montserrat";
+	font-size: 1.2rem;
+	text-align: justify;
+}
+
+ul li::before {
+	content: "\2022";
+	color: #E11B22;
+	font-size: 1.4rem;
+	font-weight: 900;
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em;
+}
+
+ul li{
+	font-family: "Montserrat";	
+	font-size: 1rem;
+	list-style: none;
+}
+
+.form{
+	font-family: 'Open Sans Condensed';
+	width: 500px;
+	padding: 30px;
+	background: #FFFFFF;
+	margin: 50px auto;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+}
+
+.form h1{
+	background: #444444;
+	text-transform: uppercase;
+	font-family: "Work Sans";
+	color: white;
+	font-size: 18px;
+	font-weight: 100;
+	padding: 20px;
+	margin: -30px -30px 30px -30px;
+}
+
+.form input[type="text"],
+.form input[type="date"],
+.form input[type="datetime"],
+.form input[type="email"],
+.form input[type="number"],
+.form input[type="search"],
+.form input[type="time"],
+.form input[type="url"],
+.form input[type="password"],
+.form textarea,
+.form select{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 100%;
+	padding: 7px;
+	border: none;
+	border-bottom: 1px solid #ddd;
+	background: transparent;
+	margin-bottom: 10px;
+	font: 16px Arial, Helvetica, sans-serif;
+	height: 45px;
+}
+
+.form textarea{
+	resize:none;
+	overflow: hidden;
+}
+
+.form input[type="button"],
+.form input[type="submit"]{
+	-moz-box-shadow: inset 0px 1px 0px 0px #EE4B2B;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #EE4B2B;
+	box-shadow: inset 0px 1px 0px 0px #EE4B2B;
+	background-color: #E11B22;
+	border: 1px solid #E11B22;
+	display: inline-block;
+	cursor: pointer;
+	color: #FFFFFF;
+	font-family: "Open Sans Condensed", sans-serif;
+	font-size: 14px;
+	padding: 8px 18px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.form :not(input[type="submit"]):focus,
+.form :not(input[type="button"]):focus {
+	border-color: #EE4B2B;
+}
+
+.form input[type="button"]:hover,
+.form input[type="submit"]:hover {
+	background: linear-gradient(to bottom, #E11B22 5%,#666666 100%);
+}
+
+.form span {
+	color: red;
+}
+
+.form p {
+	font-family: "Work Sans"
+}
+
+.buttons {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	height: 100vh;
+	align-items: top;
+	justify-content: center;
+	background:#FFF;
+}
+
+.buttons span{
+	position: relative;
+	display: inline-flex;
+	width: 180px;
+	height: 55px;
+	margin: 0 15px;
+	perspective: 1000px;
+}
+
+.buttons span a{
+	font-size: 19px;
+	letter-spacing: 1px;
+	transform-style: preserve-3d;
+	transform: translateZ(-25px);
+	transition: transform .25s;
+	font-family: 'Montserrat', sans-serif;	
+}
+
+.buttons span a:before,
+.buttons span a:after{
+	position: absolute;
+	content: attr(data-tool-tip);
+	height: 55px;
+	width: 180px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 5px solid #E11B22;
+	box-sizing: border-box;
+	border-radius: 5px;
+}
+
+.buttons span a:before{
+	color: #fff;
+	background: #E11B22;
+	transform: rotateY(0deg) translateZ(25px);
+}
+
+.buttons span a:after{
+	color: #000;
+	transform: rotateX(90deg) translateZ(25px);
+}
+
+.buttons span a:hover{
+	transform: translateZ(-25px) rotateX(-90deg);
+}
+	
+@media only screen and (max-width: 600px){ 
+	.form{
+		font-family: arial, sans;
+		width: 30%;
+	}
+
+	.form input[type="button"]:hover,
+	.form input[type="submit"]:hover{
+		background:linear-gradient(to bottom, #34CA34 4%,#30C9C5 100%);
+		background-color:#3ACA23;
+	}
+}

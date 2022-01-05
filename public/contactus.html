@@ -1,0 +1,60 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+        <div id="logo">
+            <img src="images/logo.png" height="58.8px" width="60.13px">
+        </div>
+
+        <div class="navbar">
+            <a target="_self" href="home.html"><button>Home Page </button></a>
+            <a target="_self" href="donor.html"><button>Be A Donor</button></a>
+            <a target="_self" href="compatibility.html"><button>Compatibility</button></a>
+            <a target="_self" href="contactus.html"><button>Contact Us</button></a>
+            <a target="_self" href="about.html"><button>About Us</button></a>
+            <a target="_self" href="login.html" ><button>Login</button></a>
+            <a target="_self" href="signup.html"><button>Sign Up</button></a>
+        </div>
+    </div>
+	<div class="form">
+		<form ng-app="myApp" ng-controller="validateCtrl" action="/contactus.html" 
+			method="POST" name="myForm" novalidate>
+			<h1 align=center>Contact Us</h1><br>
+			<input type="text" placeholder="Username" name="user" ng-model="user" 
+				required>
+			<span ng-show="myForm.user.$dirty && myForm.user.$invalid">
+				<span ng-show="myForm.user.$error.required">Username is required.<br>
+					</span></span>
+			<input name="email" type="email" ng-model="email" length="100" 
+				placeholder="Email" required>
+			<span ng-show = "myForm.email.$dirty && myForm.email.$invalid">
+				<span ng-show = "myForm.email.$error.required">Email required.</span>
+				<span ng-show = "myForm.email.$error.email">Invalid Email</span>
+			</span>
+			<input type="text" name="phone" ng-model="phone" ng-pattern="/^[0-9]{10}$/" 
+				placeholder="Phone" required>
+			<span ng-show = "myForm.phone.$dirty && myForm.phone.$invalid">
+				<span ng-show = "myForm.phone.$error.required">Phone no required.</span>
+				<span ng-show = "myForm.phone.$error.pattern">Invalid phone no.</span>
+			</span>
+			<textarea name="comment" placeholder="Comment or Complaint"></textarea>
+				<br><br>
+			<input type="submit" value="submit"
+				ng-disabled="myForm.user.$dirty && myForm.user.$invalid || 
+					myForm.email.$dirty && myForm.email.$invalid || 
+					myForm.phone.$dirty && myForm.phone.$invalid">
+		</form>
+		<script>
+			var app = angular.module('myApp', []);
+			app.controller('validateCtrl', function ($scope) {});
+		</script>
+</body>
+
+</html>

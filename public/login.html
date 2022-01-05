@@ -1,0 +1,37 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
+	<link rel="stylesheet" href="style.css">
+	<script src="login.js"></script>
+</head>
+
+<body onload="document.loginform.uname.focus();">
+	<div class="container">
+        <div id="logo">
+            <img src="images/logo.png" height="58.8px" width="60.13px">
+        </div>
+
+        <div class="navbar">
+            <a target="_self" href="home.html"><button>Home Page </button></a>
+            <a target="_self" href="donor.html"><button>Be A Donor</button></a>
+            <a target="_self" href="compatibility.html"><button>Compatibility</button></a>
+            <a target="_self" href="contactus.html"><button>Contact Us</button></a>
+            <a target="_self" href="about.html"><button>About Us</button></a>
+            <a target="_self" href="login.html" ><button>Login</button></a>
+            <a target="_self" href="signup.html"><button>Sign Up</button></a>
+        </div>
+    </div>
+	
+	<div class="form">
+		<form action="/login.html" method="POST" name="registration" id="registration" onsubmit="return formValidation()">
+			<h1 align=center>Login</h1><br>
+			<input type=text name="uname" id="uname" placeholder=Username>
+			<input name="pass" id="pass" type=password placeholder=password><br><br>
+			<input type="submit" value="submit">
+			<p align="center">Don't have an account? <a href="signup.html">Sign Up</a></p>
+		</form>
+</body>
+
+</html>
